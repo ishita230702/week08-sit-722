@@ -1,4 +1,5 @@
 // week08/frontend/main.js
+// ✅ Public IPs of your services (no trailing path)
 
 document.addEventListener('DOMContentLoaded', () => {
     // API endpoints for the Product and Order services.
@@ -8,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //const ORDER_API_BASE_URL = 'http://4.147.2.4:8001';
 
     // Product Service is named 'product-service-w04e2' and exposes port 8000 internally.
-    const PRODUCT_API_BASE_URL = 'http://product-service-w04e2:8000/api/products';
+    const PRODUCT_API_BASE_URL = '/api/products/';
     // Order Service is named 'order-service-w04e2' and exposes port 8001 internally.
-    const ORDER_API_BASE_URL = 'http://order-service-w04e2:8001/api/orders';
+    const ORDER_API_BASE_URL = '/api/orders/';
 
     // DOM Elements
     const messageBox = document.getElementById('message-box');
