@@ -1,0 +1,15 @@
+name: Frontend Pipeline
+
+on:
+  pull_request:
+    branches: [ "dev" ]
+  push:
+    branches: [ "workflow-update" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build frontend Docker image
+        run: docker build -t frontend:${{ github.sha }} ./frontend
