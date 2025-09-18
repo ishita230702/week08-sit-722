@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: <ACR_NAME>/<IMAGE_NAME>:<IMAGE_TAG>
+        image: sit722wk08acr123.azurecr.io/frontend:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -36,4 +36,5 @@ spec:
     - protocol: TCP
       port: 80 # The port the service listens on inside the cluster
       targetPort: 80 # The port on the Pod (containerPort where Nginx runs)
-  type: LoadBalancer # Exposes the service on a port on each Node's IP
+  type: LoadBalancer
+  loadBalancerIP: 4.237.185.40 # Exposes the service on a port on each Node's IP

@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
       - name: order-service-container
-        image: <ACR_NAME>/<IMAGE_NAME>:<IMAGE_TAG>
+        image: sit722wk08acr123.azurecr.io/order_service:latest
+
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
@@ -59,4 +60,4 @@ spec:
     - protocol: TCP
       port: 8001
       targetPort: 8000
-  type: LoadBalancer
+  type: ClusterIP 
